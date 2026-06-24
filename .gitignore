@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+db.sqlite3
+*.sqlite3
+
+# Virtual Environment
+myvenv/
+venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+
+# Django Media Files
+media/
+
+# Static Files Collection
+staticfiles/
+
+# Logs
+*.log
+
+# IDE - VS Code
+.vscode/
+
+# IDE - PyCharm
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Migrations (Optional)
+# Uncomment if you don't want migrations in git
+# */migrations/*
+# !*/migrations/__init__.py
+
+# Python Packaging
+build/
+dist/
+*.egg-info/
+
+# Cache
+*.cache
+.cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Type Checkers
+.mypy_cache/
+.pyre/
+.ruff_cache/
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Generated Files
+*.bak
+*.swp

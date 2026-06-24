@@ -1,0 +1,32 @@
+/* ============================================
+   footer.css — Global Footer
+   Loaded on every page via base.html
+   ============================================ */
+
+.mb-footer {
+  background-color: var(--mb-navy-2);
+  border-top: 1px solid var(--mb-border);
+  padding: 32px 0;
+}
+.mb-footer-brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--mb-white);
+}
+.mb-footer-copy {
+  font-size: 0.82rem;
+  color: var(--mb-white-40);
+  margin-bottom: 0;
+}
+.mb-footer-link {
+  font-size: 0.82rem;
+  color: var(--mb-white-70);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.mb-footer-link:hover { color: var(--mb-white); }
+.mb-footer-dot {
+  color: var(--mb-white-40);
+  margin: 0 6px;
+  font-size: 0.82rem;
+}

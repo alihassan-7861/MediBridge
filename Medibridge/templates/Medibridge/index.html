@@ -1,0 +1,191 @@
+{% extends 'Medibridge/base.html' %}
+{% load static %}
+
+{% block title %}Medibridge — Online Doctor Consultations{% endblock %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'landing/css/index.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- ========== HERO SECTION ========== -->
+<section class="mb-hero">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left: Text -->
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <p class="mb-eyebrow">ONLINE CONSULTATIONS</p>
+        <h1 class="mb-hero-heading">
+          See a doctor today,<br>
+          from <span>wherever</span><br>
+          you are.
+        </h1>
+        <p class="mb-hero-sub">
+          Speak with licensed physicians by video or phone, get
+          prescriptions sent to your pharmacy, and manage your
+          records in one place.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="#" class="btn btn-mb-primary btn-lg px-4">Book a Consultation</a>
+          <a href="#" class="btn btn-mb-outline btn-lg px-4">Browse Specialists</a>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="mb-hero-badges">
+          <span class="mb-hero-badge">
+            <span class="badge-dot"></span> PMDC Verified
+          </span>
+          <span class="mb-hero-badge">
+            <span class="badge-dot"></span> GMC Registered
+          </span>
+          <span class="mb-hero-badge">
+            <span class="badge-dot"></span> DHA Licensed
+          </span>
+        </div>
+      </div>
+
+      <!-- Right: Video Card -->
+      <div class="col-lg-6 text-center">
+        <div class="mb-video-card">
+          <div class="mb-video-inner">
+            <div class="mb-doctor-placeholder">
+              <div class="mb-avatar">👨‍⚕️</div>
+              <div class="mb-call-bar">
+                <span class="mb-live-dot"></span>
+                <span class="mb-live-text">Live Consultation</span>
+                <span class="mb-call-timer">12:34</span>
+              </div>
+              <div class="mb-patient-thumb">🧑‍💻</div>
+            </div>
+          </div>
+          <!-- Doctor strip -->
+          <div class="mb-video-info">
+            <div>
+              <p class="mb-video-doctor-name">Dr. Ayesha Khan</p>
+              <p class="mb-video-doctor-spec">General Physician · PMDC</p>
+            </div>
+            <div class="mb-video-rating">⭐ 4.9</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end row -->
+
+    <!-- Trust Bar -->
+    <div class="mb-trust-bar row text-center g-0">
+      <div class="col-6 col-md-3 mb-trust-item">
+        <p class="mb-trust-number">500<span>+</span></p>
+        <p class="mb-trust-label">Licensed Physicians</p>
+      </div>
+      <div class="col-6 col-md-3 mb-trust-item">
+        <p class="mb-trust-number">24<span>/7</span></p>
+        <p class="mb-trust-label">Availability</p>
+      </div>
+      <div class="col-6 col-md-3 mb-trust-item">
+        <p class="mb-trust-number">🔒</p>
+        <p class="mb-trust-label">Secure & Confidential</p>
+      </div>
+      <div class="col-6 col-md-3 mb-trust-item">
+        <p class="mb-trust-number">💊</p>
+        <p class="mb-trust-label">Pharmacy Integrated</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========== SERVICES SECTION ========== -->
+<section class="mb-services">
+  <div class="container">
+
+    <p class="mb-eyebrow">OUR SERVICES</p>
+    <h2 class="mb-section-heading">Care suited to how you live</h2>
+    <p class="mb-section-sub">
+      From routine check-ins to specialist referrals, choose the
+      consultation type that fits your need.
+    </p>
+
+    <div class="row g-4 mt-3">
+
+      <div class="col-md-4">
+        <div class="mb-service-card">
+          <div class="mb-service-badge">GP</div>
+          <h3 class="mb-service-title">General Consultation</h3>
+          <p class="mb-service-desc">
+            Discuss everyday symptoms, get advice, and receive
+            prescriptions without leaving home.
+          </p>
+          <a href="#" class="mb-service-link">Book now →</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="mb-service-card">
+          <div class="mb-service-badge">Rx</div>
+          <h3 class="mb-service-title">Prescription Renewal</h3>
+          <p class="mb-service-desc">
+            Renew ongoing medication after a quick review with a
+            licensed physician.
+          </p>
+          <a href="#" class="mb-service-link">Book now →</a>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="mb-service-card">
+          <div class="mb-service-badge">SP</div>
+          <h3 class="mb-service-title">Specialist Referral</h3>
+          <p class="mb-service-desc">
+            Get connected to cardiology, dermatology, urology, and
+            other specialists near you.
+          </p>
+          <a href="#" class="mb-service-link">Book now →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== HOW IT WORKS SECTION ========== -->
+<section class="mb-how">
+  <div class="container">
+    <div class="mb-how-inner">
+
+      <p class="mb-eyebrow">SIMPLE PROCESS</p>
+      <h2 class="mb-section-heading">How a consultation works</h2>
+      <p class="mb-section-sub mx-auto">
+        Three steps from booking to follow-up care.
+      </p>
+
+      <div class="mb-steps-wrapper">
+        <div class="mb-step-item">
+          <div class="mb-step-num">1</div>
+          <h3 class="mb-step-title">Book a slot</h3>
+          <p class="mb-step-desc">Pick a doctor and a time that works for you.</p>
+        </div>
+        <div class="mb-step-item">
+          <div class="mb-step-num active">2</div>
+          <h3 class="mb-step-title">Consult by video</h3>
+          <p class="mb-step-desc">Talk through your symptoms securely online.</p>
+        </div>
+        <div class="mb-step-item">
+          <div class="mb-step-num">3</div>
+          <h3 class="mb-step-title">Get your care plan</h3>
+          <p class="mb-step-desc">Receive prescriptions and follow-up notes digitally.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static 'landing/js/index.js' %}"></script>
+{% endblock %}

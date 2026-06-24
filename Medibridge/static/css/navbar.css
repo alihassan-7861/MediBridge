@@ -1,0 +1,33 @@
+/* ============================================
+   navbar.css — Global Navbar
+   Loaded on every page via base.html
+   ============================================ */
+
+.mb-navbar {
+  background-color: var(--mb-navy) !important;
+  border-bottom: 1px solid var(--mb-border);
+  padding: 16px 0;
+  z-index: 1000;
+}
+.mb-navbar .navbar-brand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--mb-white) !important;
+}
+.mb-navbar .nav-link {
+  color: var(--mb-white-70) !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 14px !important;
+  border-radius: var(--mb-radius-sm);
+  transition: color 0.2s, background 0.2s;
+}
+.mb-navbar .nav-link:hover {
+  color: var(--mb-white) !important;
+  background: var(--mb-white-10);
+}
+.mb-navbar .nav-link.active {
+  color: var(--mb-white) !important;
+  background: var(--mb-white-10);
+}

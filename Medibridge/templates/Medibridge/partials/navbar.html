@@ -1,0 +1,44 @@
+{% load static %}
+<!-- ========== GLOBAL NAVBAR ========== -->
+<nav class="mb-navbar navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+
+    <!-- Brand / Logo -->
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <span class="brand-icon">✚</span>
+      Medibridge
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler border-0" type="button"
+            data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-lg-1">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Find a Doctor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">How It Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Specialties</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">For Clinics</a>
+        </li>
+      </ul>
+
+      <!-- Auth Buttons -->
+      <div class="d-flex gap-2 mt-3 mt-lg-0 align-items-center">
+        <a href="#" class="btn-login">Login</a>
+        <a href="#" class="btn-book">Book Consultation</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
