@@ -48,13 +48,20 @@
         <div class="mb-video-card">
           <div class="mb-video-inner">
             <div class="mb-doctor-placeholder">
-              <div class="mb-avatar">👨‍⚕️</div>
+              <!-- Real doctor image -->
+              <div class="mb-avatar">
+                <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=120&h=120&fit=crop&crop=face&q=80"
+                     alt="Doctor" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
+              </div>
               <div class="mb-call-bar">
                 <span class="mb-live-dot"></span>
                 <span class="mb-live-text">Live Consultation</span>
                 <span class="mb-call-timer">12:34</span>
               </div>
-              <div class="mb-patient-thumb">🧑‍💻</div>
+              <div class="mb-patient-thumb">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=60&h=60&fit=crop&crop=face&q=80"
+                     alt="Patient" style="width:100%;height:100%;object-fit:cover;border-radius:8px;">
+              </div>
             </div>
           </div>
           <div class="mb-video-info">
@@ -78,19 +85,34 @@
     <div class="mb-trust-bar row text-center g-0">
 
       <div class="col-6 col-md-3 mb-trust-item">
-        <div class="mb-trust-icon">✅</div>
+        <div class="mb-trust-icon-wrap">
+          <img src="https://img.icons8.com/fluency/48/medical-doctor.png" alt="Verified Doctors">
+        </div>
+        <p class="mb-trust-number">500+</p>
         <p class="mb-trust-label">Verified Doctors</p>
       </div>
+
       <div class="col-6 col-md-3 mb-trust-item">
-        <div class="mb-trust-icon">🔒</div>
+        <div class="mb-trust-icon-wrap">
+          <img src="https://img.icons8.com/fluency/48/security-checked.png" alt="Secure">
+        </div>
+        <p class="mb-trust-number">100%</p>
         <p class="mb-trust-label">Secure & Private</p>
       </div>
+
       <div class="col-6 col-md-3 mb-trust-item">
-        <div class="mb-trust-icon">🕐</div>
-        <p class="mb-trust-label">24/7 Availability</p>
+        <div class="mb-trust-icon-wrap">
+          <img src="https://img.icons8.com/fluency/48/clock.png" alt="24/7">
+        </div>
+        <p class="mb-trust-number">24/7</p>
+        <p class="mb-trust-label">Availability</p>
       </div>
+
       <div class="col-6 col-md-3 mb-trust-item">
-        <div class="mb-trust-icon">⚡</div>
+        <div class="mb-trust-icon-wrap">
+          <img src="https://img.icons8.com/fluency/48/appointment-reminders.png" alt="Instant Booking">
+        </div>
+        <p class="mb-trust-number">&lt;2min</p>
         <p class="mb-trust-label">Instant Booking</p>
       </div>
 
@@ -111,34 +133,36 @@
     <div class="mb-steps-wrapper">
 
       <div class="mb-step-item">
-        <div class="mb-step-icon">🩺</div>
+        <div class="mb-step-icon">
+          <img src="https://img.icons8.com/fluency/56/stethoscope.png" alt="Choose Service">
+        </div>
         <div class="mb-step-num">1</div>
         <h3 class="mb-step-title">Choose Service</h3>
         <p class="mb-step-desc">Pick the specialty that matches your needs from our list.</p>
       </div>
 
-      <div class="mb-step-connector"></div>
-
       <div class="mb-step-item">
-        <div class="mb-step-icon">📅</div>
+        <div class="mb-step-icon">
+          <img src="https://img.icons8.com/fluency/56/calendar.png" alt="Book Slot">
+        </div>
         <div class="mb-step-num">2</div>
         <h3 class="mb-step-title">Book a Slot</h3>
         <p class="mb-step-desc">Select a doctor and choose a time that works for you.</p>
       </div>
 
-      <div class="mb-step-connector"></div>
-
       <div class="mb-step-item">
-        <div class="mb-step-icon">💻</div>
+        <div class="mb-step-icon">
+          <img src="https://img.icons8.com/fluency/56/video-call.png" alt="Consult Online">
+        </div>
         <div class="mb-step-num active">3</div>
         <h3 class="mb-step-title">Consult Online</h3>
         <p class="mb-step-desc">Talk to your doctor securely by video or phone call.</p>
       </div>
 
-      <div class="mb-step-connector"></div>
-
       <div class="mb-step-item">
-        <div class="mb-step-icon">📋</div>
+        <div class="mb-step-icon">
+          <img src="https://img.icons8.com/fluency/56/prescription.png" alt="Get Plan">
+        </div>
         <div class="mb-step-num">4</div>
         <h3 class="mb-step-title">Get Your Plan</h3>
         <p class="mb-step-desc">Receive your prescription and treatment plan digitally.</p>
@@ -162,7 +186,9 @@
 
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="mb-service-card">
-          <div class="mb-service-icon">🩺</div>
+          <div class="mb-service-icon">
+            <img src="https://img.icons8.com/fluency/48/stethoscope.png" alt="General Medicine">
+          </div>
           <h3 class="mb-service-title">General Medicine</h3>
           <p class="mb-service-desc">Everyday symptoms, advice and prescriptions from home.</p>
           <a href="#" class="mb-service-link">Book Now →</a>
@@ -171,7 +197,9 @@
 
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="mb-service-card">
-          <div class="mb-service-icon">🧠</div>
+          <div class="mb-service-icon">
+            <img src="https://img.icons8.com/fluency/48/brain.png" alt="Mental Health">
+          </div>
           <h3 class="mb-service-title">Mental Health</h3>
           <p class="mb-service-desc">Therapy, counselling and psychiatric support online.</p>
           <a href="#" class="mb-service-link">Book Now →</a>
@@ -180,7 +208,9 @@
 
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="mb-service-card">
-          <div class="mb-service-icon">👶</div>
+          <div class="mb-service-icon">
+            <img src="https://img.icons8.com/fluency/48/baby.png" alt="Paediatrics">
+          </div>
           <h3 class="mb-service-title">Paediatrics</h3>
           <p class="mb-service-desc">Expert child healthcare from certified paediatricians.</p>
           <a href="#" class="mb-service-link">Book Now →</a>
@@ -189,7 +219,9 @@
 
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="mb-service-card">
-          <div class="mb-service-icon">🌿</div>
+          <div class="mb-service-icon">
+            <img src="https://img.icons8.com/fluency/48/dermatology.png" alt="Dermatology">
+          </div>
           <h3 class="mb-service-title">Dermatology</h3>
           <p class="mb-service-desc">Skin conditions, acne, eczema and rashes treated online.</p>
           <a href="#" class="mb-service-link">Book Now →</a>
@@ -198,7 +230,9 @@
 
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="mb-service-card">
-          <div class="mb-service-icon">❤️</div>
+          <div class="mb-service-icon">
+            <img src="https://img.icons8.com/fluency/48/heart-with-pulse.png" alt="Chronic Disease">
+          </div>
           <h3 class="mb-service-title">Chronic Disease</h3>
           <p class="mb-service-desc">Ongoing management for diabetes, hypertension and more.</p>
           <a href="#" class="mb-service-link">Book Now →</a>
@@ -207,7 +241,9 @@
 
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="mb-service-card">
-          <div class="mb-service-icon">💊</div>
+          <div class="mb-service-icon">
+            <img src="https://img.icons8.com/fluency/48/pill.png" alt="Prescription">
+          </div>
           <h3 class="mb-service-title">Prescription Renewal</h3>
           <p class="mb-service-desc">Renew ongoing medication after a quick physician review.</p>
           <a href="#" class="mb-service-link">Book Now →</a>
@@ -216,7 +252,9 @@
 
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="mb-service-card">
-          <div class="mb-service-icon">🥗</div>
+          <div class="mb-service-icon">
+            <img src="https://img.icons8.com/fluency/48/salad.png" alt="Nutrition">
+          </div>
           <h3 class="mb-service-title">Nutrition & Diet</h3>
           <p class="mb-service-desc">Personalised diet plans from certified nutritionists.</p>
           <a href="#" class="mb-service-link">Book Now →</a>
@@ -225,7 +263,9 @@
 
       <div class="col-lg-3 col-md-4 col-sm-6">
         <div class="mb-service-card">
-          <div class="mb-service-icon">🦴</div>
+          <div class="mb-service-icon">
+            <img src="https://img.icons8.com/fluency/48/physiotherapy.png" alt="Physiotherapy">
+          </div>
           <h3 class="mb-service-title">Physiotherapy</h3>
           <p class="mb-service-desc">Rehabilitation and physical therapy sessions online.</p>
           <a href="#" class="mb-service-link">Book Now →</a>
@@ -250,12 +290,21 @@
 
       <div class="col-lg-3 col-md-6">
         <div class="mb-doctor-card">
-          <div class="mb-doctor-avatar">👨‍⚕️</div>
+          <div class="mb-doctor-avatar">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=120&h=120&fit=crop&crop=face&q=80"
+                 alt="Dr. Ahmed Raza">
+          </div>
           <h3 class="mb-doctor-name">Dr. Ahmed Raza</h3>
           <p class="mb-doctor-spec">General Physician</p>
           <p class="mb-doctor-reg">PMDC · 12 yrs exp</p>
           <div class="mb-doctor-rating">
-            <span class="mb-stars">⭐⭐⭐⭐⭐</span>
+            <div class="mb-stars-row">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+            </div>
             <span class="mb-rating-num">4.9</span>
           </div>
           <a href="#" class="btn btn-mb-primary w-100 mt-3">Book Now</a>
@@ -265,12 +314,21 @@
       <div class="col-lg-3 col-md-6">
         <div class="mb-doctor-card mb-doctor-card--featured">
           <div class="mb-featured-badge">Top Rated</div>
-          <div class="mb-doctor-avatar">👩‍⚕️</div>
+          <div class="mb-doctor-avatar">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=120&h=120&fit=crop&crop=face&q=80"
+                 alt="Dr. Ayesha Khan">
+          </div>
           <h3 class="mb-doctor-name">Dr. Ayesha Khan</h3>
           <p class="mb-doctor-spec">Mental Health</p>
           <p class="mb-doctor-reg">PMC · 8 yrs exp</p>
           <div class="mb-doctor-rating">
-            <span class="mb-stars">⭐⭐⭐⭐⭐</span>
+            <div class="mb-stars-row">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+            </div>
             <span class="mb-rating-num">5.0</span>
           </div>
           <a href="#" class="btn btn-mb-primary w-100 mt-3">Book Now</a>
@@ -279,12 +337,21 @@
 
       <div class="col-lg-3 col-md-6">
         <div class="mb-doctor-card">
-          <div class="mb-doctor-avatar">👨‍⚕️</div>
+          <div class="mb-doctor-avatar">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=120&h=120&fit=crop&crop=face&q=80"
+                 alt="Dr. James Wilson">
+          </div>
           <h3 class="mb-doctor-name">Dr. James Wilson</h3>
           <p class="mb-doctor-spec">Dermatology</p>
           <p class="mb-doctor-reg">GMC · 15 yrs exp</p>
           <div class="mb-doctor-rating">
-            <span class="mb-stars">⭐⭐⭐⭐⭐</span>
+            <div class="mb-stars-row">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+            </div>
             <span class="mb-rating-num">4.8</span>
           </div>
           <a href="#" class="btn btn-mb-primary w-100 mt-3">Book Now</a>
@@ -293,12 +360,21 @@
 
       <div class="col-lg-3 col-md-6">
         <div class="mb-doctor-card">
-          <div class="mb-doctor-avatar">👩‍⚕️</div>
+          <div class="mb-doctor-avatar">
+            <img src="https://images.unsplash.com/photo-1651008376811-b90baee60c1f?w=120&h=120&fit=crop&crop=face&q=80"
+                 alt="Dr. Sara Al-Farsi">
+          </div>
           <h3 class="mb-doctor-name">Dr. Sara Al-Farsi</h3>
           <p class="mb-doctor-spec">Paediatrics</p>
           <p class="mb-doctor-reg">DHA · 10 yrs exp</p>
           <div class="mb-doctor-rating">
-            <span class="mb-stars">⭐⭐⭐⭐⭐</span>
+            <div class="mb-stars-row">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+              <img src="https://img.icons8.com/fluency/16/star.png" alt="star">
+            </div>
             <span class="mb-rating-num">4.9</span>
           </div>
           <a href="#" class="btn btn-mb-primary w-100 mt-3">Book Now</a>
@@ -327,12 +403,18 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="mb-testimonial-card">
-          <div class="mb-testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <div class="mb-testimonial-stars">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+          </div>
           <p class="mb-testimonial-quote">
             "Got a prescription within 30 minutes from home. The doctor was professional and thorough. Highly recommend Medibridge!"
           </p>
           <div class="mb-testimonial-author">
-            <div class="mb-author-avatar">S</div>
+            <img class="mb-author-avatar-img" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=60&h=60&fit=crop&crop=face&q=80" alt="Sara M.">
             <div>
               <p class="mb-author-name">Sara M.</p>
               <p class="mb-author-location">Lahore, Pakistan</p>
@@ -343,12 +425,18 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="mb-testimonial-card mb-testimonial-card--featured">
-          <div class="mb-testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <div class="mb-testimonial-stars">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+          </div>
           <p class="mb-testimonial-quote">
             "As someone with a busy schedule in London, this service is a lifesaver. Booked, consulted and got my prescription all in one hour."
           </p>
           <div class="mb-testimonial-author">
-            <div class="mb-author-avatar">J</div>
+            <img class="mb-author-avatar-img" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face&q=80" alt="James K.">
             <div>
               <p class="mb-author-name">James K.</p>
               <p class="mb-author-location">London, UK</p>
@@ -359,12 +447,18 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="mb-testimonial-card">
-          <div class="mb-testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <div class="mb-testimonial-stars">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+            <img src="https://img.icons8.com/fluency/20/star.png" alt="star">
+          </div>
           <p class="mb-testimonial-quote">
             "The mental health support I received was exceptional. My therapist was kind, understanding and very helpful."
           </p>
           <div class="mb-testimonial-author">
-            <div class="mb-author-avatar">F</div>
+            <img class="mb-author-avatar-img" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face&q=80" alt="Fatima A.">
             <div>
               <p class="mb-author-name">Fatima A.</p>
               <p class="mb-author-location">Dubai, UAE</p>
@@ -382,7 +476,6 @@
 <section class="mb-stats">
   <div class="container">
     <div class="row g-0 text-center">
-
       <div class="col-6 col-md-3 mb-stat-item">
         <p class="mb-stat-number">10,000+</p>
         <p class="mb-stat-label">Consultations</p>
@@ -399,7 +492,6 @@
         <p class="mb-stat-number">4.9/5</p>
         <p class="mb-stat-label">Average Rating</p>
       </div>
-
     </div>
   </div>
 </section>
@@ -419,14 +511,14 @@
         </p>
         <div class="mb-app-buttons">
           <a href="#" class="mb-app-btn">
-            <span class="mb-app-btn-icon">🍎</span>
+            <img src="https://img.icons8.com/fluency/36/apple-logo.png" alt="App Store" class="mb-app-btn-icon">
             <div>
               <span class="mb-app-btn-small">Download on the</span>
               <span class="mb-app-btn-big">App Store</span>
             </div>
           </a>
           <a href="#" class="mb-app-btn">
-            <span class="mb-app-btn-icon">▶</span>
+            <img src="https://img.icons8.com/fluency/36/google-play.png" alt="Google Play" class="mb-app-btn-icon">
             <div>
               <span class="mb-app-btn-small">Get it on</span>
               <span class="mb-app-btn-big">Google Play</span>
@@ -439,17 +531,29 @@
         <div class="mb-phone-mockup">
           <div class="mb-phone-screen">
             <div class="mb-phone-content">
-              <p class="mb-phone-header">Medibridge</p>
+              <p class="mb-phone-header">
+                <img src="https://img.icons8.com/fluency/20/medical-doctor.png" alt="Medibridge">
+                Medibridge
+              </p>
               <div class="mb-phone-card">
-                <span>📅 Next Appointment</span>
+                <span>
+                  <img src="https://img.icons8.com/fluency/16/calendar.png" alt="appointment">
+                  Next Appointment
+                </span>
                 <p>Dr. Ayesha · Today 5PM</p>
               </div>
               <div class="mb-phone-card">
-                <span>💊 Prescription Ready</span>
+                <span>
+                  <img src="https://img.icons8.com/fluency/16/pill.png" alt="prescription">
+                  Prescription Ready
+                </span>
                 <p>Tap to download PDF</p>
               </div>
               <div class="mb-phone-card">
-                <span>💬 Message from Doctor</span>
+                <span>
+                  <img src="https://img.icons8.com/fluency/16/chat.png" alt="message">
+                  Message from Doctor
+                </span>
                 <p>Take rest and fluids...</p>
               </div>
             </div>
@@ -475,7 +579,9 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="mb-blog-card">
-          <div class="mb-blog-image">🏥</div>
+          <div class="mb-blog-image">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=180&fit=crop&q=80" alt="Doctor visit">
+          </div>
           <div class="mb-blog-body">
             <span class="mb-blog-tag">General Health</span>
             <h3 class="mb-blog-title">10 Signs You Should See a Doctor Today</h3>
@@ -490,7 +596,9 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="mb-blog-card">
-          <div class="mb-blog-image">🧠</div>
+          <div class="mb-blog-image">
+            <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=180&fit=crop&q=80" alt="Mental health">
+          </div>
           <div class="mb-blog-body">
             <span class="mb-blog-tag">Mental Health</span>
             <h3 class="mb-blog-title">Understanding Anxiety: A Complete Guide</h3>
@@ -505,7 +613,9 @@
 
       <div class="col-lg-4 col-md-6">
         <div class="mb-blog-card">
-          <div class="mb-blog-image">💊</div>
+          <div class="mb-blog-image">
+            <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400&h=180&fit=crop&q=80" alt="Prescription">
+          </div>
           <div class="mb-blog-body">
             <span class="mb-blog-tag">Prescriptions</span>
             <h3 class="mb-blog-title">How Online Prescriptions Work in Pakistan</h3>
