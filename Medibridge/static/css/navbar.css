@@ -1,33 +1,116 @@
 /* ============================================
    navbar.css — Global Navbar
-   Loaded on every page via base.html
+   Uses variables defined in main.css
    ============================================ */
 
 .mb-navbar {
   background-color: var(--mb-navy) !important;
-  border-bottom: 1px solid var(--mb-border);
-  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 14px 0;
   z-index: 1000;
 }
+
 .mb-navbar .navbar-brand {
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: -0.3px;
+  font-size: 1.3rem;
+  font-weight: 800;
   color: var(--mb-white) !important;
+  letter-spacing: -0.4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
 }
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  background: var(--mb-teal);
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--mb-white);
+  font-weight: 900;
+  flex-shrink: 0;
+}
+
 .mb-navbar .nav-link {
-  color: var(--mb-white-70) !important;
-  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.88rem;
   font-weight: 500;
-  padding: 6px 14px !important;
-  border-radius: var(--mb-radius-sm);
+  padding: 7px 16px !important;
+  border-radius: var(--mb-radius-xs);
   transition: color 0.2s, background 0.2s;
 }
+
 .mb-navbar .nav-link:hover {
   color: var(--mb-white) !important;
-  background: var(--mb-white-10);
+  background: rgba(255,255,255,0.09);
 }
+
 .mb-navbar .nav-link.active {
   color: var(--mb-white) !important;
-  background: var(--mb-white-10);
+  background: rgba(255,255,255,0.12);
+}
+
+/* Navbar Login Button */
+.mb-navbar .btn-login {
+  background: transparent;
+  color: rgba(255,255,255,0.82);
+  border: 1.5px solid rgba(255,255,255,0.22);
+  border-radius: var(--mb-radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 20px;
+  transition: all 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.mb-navbar .btn-login:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.45);
+  color: var(--mb-white);
+}
+
+/* Navbar Book Now Button */
+.mb-navbar .btn-book {
+  background: var(--mb-teal);
+  color: var(--mb-white);
+  border: none;
+  border-radius: var(--mb-radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 7px 20px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.mb-navbar .btn-book:hover {
+  background: var(--mb-teal-hover);
+  color: var(--mb-white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(47,122,111,0.35);
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+  .mb-navbar .navbar-collapse {
+    background: var(--mb-navy);
+    padding: 16px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    border-radius: 0 0 var(--mb-radius-sm) var(--mb-radius-sm);
+  }
+  .mb-navbar .d-flex {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .mb-navbar .btn-login,
+  .mb-navbar .btn-book {
+    width: 100%;
+    text-align: center;
+  }
 }

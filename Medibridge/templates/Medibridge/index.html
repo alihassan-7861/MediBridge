@@ -9,7 +9,7 @@
 
 {% block content %}
 
-<!-- ========== HERO SECTION ========== -->
+<!-- ========== 1. HERO SECTION ========== -->
 <section class="mb-hero">
   <div class="container">
     <div class="row align-items-center">
@@ -27,22 +27,19 @@
           prescriptions sent to your pharmacy, and manage your
           records in one place.
         </p>
-        <div class="d-flex flex-wrap gap-3">
-          <a href="#" class="btn btn-mb-primary btn-lg px-4">Book a Consultation</a>
-          <a href="#" class="btn btn-mb-outline btn-lg px-4">Browse Specialists</a>
+
+        <!-- Search Bar -->
+        <div class="mb-search-bar">
+          <span class="mb-search-icon">🔍</span>
+          <input type="text" class="mb-search-input" placeholder="Find a doctor or service...">
+          <button class="mb-search-btn">Search</button>
         </div>
 
         <!-- Trust Badges -->
         <div class="mb-hero-badges">
-          <span class="mb-hero-badge">
-            <span class="badge-dot"></span> PMDC Verified
-          </span>
-          <span class="mb-hero-badge">
-            <span class="badge-dot"></span> GMC Registered
-          </span>
-          <span class="mb-hero-badge">
-            <span class="badge-dot"></span> DHA Licensed
-          </span>
+          <span class="mb-hero-badge"><span class="badge-dot"></span> PMDC Verified</span>
+          <span class="mb-hero-badge"><span class="badge-dot"></span> GMC Registered</span>
+          <span class="mb-hero-badge"><span class="badge-dot"></span> DHA Licensed</span>
         </div>
       </div>
 
@@ -60,7 +57,6 @@
               <div class="mb-patient-thumb">🧑‍💻</div>
             </div>
           </div>
-          <!-- Doctor strip -->
           <div class="mb-video-info">
             <div>
               <p class="mb-video-doctor-name">Dr. Ayesha Khan</p>
@@ -71,79 +67,31 @@
         </div>
       </div>
 
-    </div><!-- end row -->
-
-    <!-- Trust Bar -->
-    <div class="mb-trust-bar row text-center g-0">
-      <div class="col-6 col-md-3 mb-trust-item">
-        <p class="mb-trust-number">500<span>+</span></p>
-        <p class="mb-trust-label">Licensed Physicians</p>
-      </div>
-      <div class="col-6 col-md-3 mb-trust-item">
-        <p class="mb-trust-number">24<span>/7</span></p>
-        <p class="mb-trust-label">Availability</p>
-      </div>
-      <div class="col-6 col-md-3 mb-trust-item">
-        <p class="mb-trust-number">🔒</p>
-        <p class="mb-trust-label">Secure & Confidential</p>
-      </div>
-      <div class="col-6 col-md-3 mb-trust-item">
-        <p class="mb-trust-number">💊</p>
-        <p class="mb-trust-label">Pharmacy Integrated</p>
-      </div>
     </div>
-
   </div>
 </section>
 
 
-<!-- ========== SERVICES SECTION ========== -->
-<section class="mb-services">
+<!-- ========== 2. TRUST BAR ========== -->
+<section class="mb-trust-section">
   <div class="container">
+    <div class="mb-trust-bar row text-center g-0">
 
-    <p class="mb-eyebrow">OUR SERVICES</p>
-    <h2 class="mb-section-heading">Care suited to how you live</h2>
-    <p class="mb-section-sub">
-      From routine check-ins to specialist referrals, choose the
-      consultation type that fits your need.
-    </p>
-
-    <div class="row g-4 mt-3">
-
-      <div class="col-md-4">
-        <div class="mb-service-card">
-          <div class="mb-service-badge">GP</div>
-          <h3 class="mb-service-title">General Consultation</h3>
-          <p class="mb-service-desc">
-            Discuss everyday symptoms, get advice, and receive
-            prescriptions without leaving home.
-          </p>
-          <a href="#" class="mb-service-link">Book now →</a>
-        </div>
+      <div class="col-6 col-md-3 mb-trust-item">
+        <div class="mb-trust-icon">✅</div>
+        <p class="mb-trust-label">Verified Doctors</p>
       </div>
-
-      <div class="col-md-4">
-        <div class="mb-service-card">
-          <div class="mb-service-badge">Rx</div>
-          <h3 class="mb-service-title">Prescription Renewal</h3>
-          <p class="mb-service-desc">
-            Renew ongoing medication after a quick review with a
-            licensed physician.
-          </p>
-          <a href="#" class="mb-service-link">Book now →</a>
-        </div>
+      <div class="col-6 col-md-3 mb-trust-item">
+        <div class="mb-trust-icon">🔒</div>
+        <p class="mb-trust-label">Secure & Private</p>
       </div>
-
-      <div class="col-md-4">
-        <div class="mb-service-card">
-          <div class="mb-service-badge">SP</div>
-          <h3 class="mb-service-title">Specialist Referral</h3>
-          <p class="mb-service-desc">
-            Get connected to cardiology, dermatology, urology, and
-            other specialists near you.
-          </p>
-          <a href="#" class="mb-service-link">Book now →</a>
-        </div>
+      <div class="col-6 col-md-3 mb-trust-item">
+        <div class="mb-trust-icon">🕐</div>
+        <p class="mb-trust-label">24/7 Availability</p>
+      </div>
+      <div class="col-6 col-md-3 mb-trust-item">
+        <div class="mb-trust-icon">⚡</div>
+        <p class="mb-trust-label">Instant Booking</p>
       </div>
 
     </div>
@@ -151,35 +99,429 @@
 </section>
 
 
-<!-- ========== HOW IT WORKS SECTION ========== -->
+<!-- ========== 3. HOW IT WORKS ========== -->
 <section class="mb-how">
   <div class="container">
-    <div class="mb-how-inner">
-
+    <div class="text-center mb-section-header">
       <p class="mb-eyebrow">SIMPLE PROCESS</p>
       <h2 class="mb-section-heading">How a consultation works</h2>
-      <p class="mb-section-sub mx-auto">
-        Three steps from booking to follow-up care.
-      </p>
+      <p class="mb-section-sub mx-auto">Four simple steps from booking to getting your care plan.</p>
+    </div>
 
-      <div class="mb-steps-wrapper">
-        <div class="mb-step-item">
-          <div class="mb-step-num">1</div>
-          <h3 class="mb-step-title">Book a slot</h3>
-          <p class="mb-step-desc">Pick a doctor and a time that works for you.</p>
-        </div>
-        <div class="mb-step-item">
-          <div class="mb-step-num active">2</div>
-          <h3 class="mb-step-title">Consult by video</h3>
-          <p class="mb-step-desc">Talk through your symptoms securely online.</p>
-        </div>
-        <div class="mb-step-item">
-          <div class="mb-step-num">3</div>
-          <h3 class="mb-step-title">Get your care plan</h3>
-          <p class="mb-step-desc">Receive prescriptions and follow-up notes digitally.</p>
+    <div class="mb-steps-wrapper">
+
+      <div class="mb-step-item">
+        <div class="mb-step-icon">🩺</div>
+        <div class="mb-step-num">1</div>
+        <h3 class="mb-step-title">Choose Service</h3>
+        <p class="mb-step-desc">Pick the specialty that matches your needs from our list.</p>
+      </div>
+
+      <div class="mb-step-connector"></div>
+
+      <div class="mb-step-item">
+        <div class="mb-step-icon">📅</div>
+        <div class="mb-step-num">2</div>
+        <h3 class="mb-step-title">Book a Slot</h3>
+        <p class="mb-step-desc">Select a doctor and choose a time that works for you.</p>
+      </div>
+
+      <div class="mb-step-connector"></div>
+
+      <div class="mb-step-item">
+        <div class="mb-step-icon">💻</div>
+        <div class="mb-step-num active">3</div>
+        <h3 class="mb-step-title">Consult Online</h3>
+        <p class="mb-step-desc">Talk to your doctor securely by video or phone call.</p>
+      </div>
+
+      <div class="mb-step-connector"></div>
+
+      <div class="mb-step-item">
+        <div class="mb-step-icon">📋</div>
+        <div class="mb-step-num">4</div>
+        <h3 class="mb-step-title">Get Your Plan</h3>
+        <p class="mb-step-desc">Receive your prescription and treatment plan digitally.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 4. SERVICES GRID ========== -->
+<section class="mb-services">
+  <div class="container">
+    <div class="text-center mb-section-header">
+      <p class="mb-eyebrow">OUR SERVICES</p>
+      <h2 class="mb-section-heading">Care suited to how you live</h2>
+      <p class="mb-section-sub mx-auto">From routine check-ins to specialist referrals, choose the consultation type that fits your need.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="mb-service-card">
+          <div class="mb-service-icon">🩺</div>
+          <h3 class="mb-service-title">General Medicine</h3>
+          <p class="mb-service-desc">Everyday symptoms, advice and prescriptions from home.</p>
+          <a href="#" class="mb-service-link">Book Now →</a>
         </div>
       </div>
 
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="mb-service-card">
+          <div class="mb-service-icon">🧠</div>
+          <h3 class="mb-service-title">Mental Health</h3>
+          <p class="mb-service-desc">Therapy, counselling and psychiatric support online.</p>
+          <a href="#" class="mb-service-link">Book Now →</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="mb-service-card">
+          <div class="mb-service-icon">👶</div>
+          <h3 class="mb-service-title">Paediatrics</h3>
+          <p class="mb-service-desc">Expert child healthcare from certified paediatricians.</p>
+          <a href="#" class="mb-service-link">Book Now →</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="mb-service-card">
+          <div class="mb-service-icon">🌿</div>
+          <h3 class="mb-service-title">Dermatology</h3>
+          <p class="mb-service-desc">Skin conditions, acne, eczema and rashes treated online.</p>
+          <a href="#" class="mb-service-link">Book Now →</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="mb-service-card">
+          <div class="mb-service-icon">❤️</div>
+          <h3 class="mb-service-title">Chronic Disease</h3>
+          <p class="mb-service-desc">Ongoing management for diabetes, hypertension and more.</p>
+          <a href="#" class="mb-service-link">Book Now →</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="mb-service-card">
+          <div class="mb-service-icon">💊</div>
+          <h3 class="mb-service-title">Prescription Renewal</h3>
+          <p class="mb-service-desc">Renew ongoing medication after a quick physician review.</p>
+          <a href="#" class="mb-service-link">Book Now →</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="mb-service-card">
+          <div class="mb-service-icon">🥗</div>
+          <h3 class="mb-service-title">Nutrition & Diet</h3>
+          <p class="mb-service-desc">Personalised diet plans from certified nutritionists.</p>
+          <a href="#" class="mb-service-link">Book Now →</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-sm-6">
+        <div class="mb-service-card">
+          <div class="mb-service-icon">🦴</div>
+          <h3 class="mb-service-title">Physiotherapy</h3>
+          <p class="mb-service-desc">Rehabilitation and physical therapy sessions online.</p>
+          <a href="#" class="mb-service-link">Book Now →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 5. FEATURED DOCTORS ========== -->
+<section class="mb-doctors">
+  <div class="container">
+    <div class="text-center mb-section-header">
+      <p class="mb-eyebrow">OUR DOCTORS</p>
+      <h2 class="mb-section-heading">Meet our top-rated physicians</h2>
+      <p class="mb-section-sub mx-auto">All doctors are verified, licensed and experienced in their specialties.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-3 col-md-6">
+        <div class="mb-doctor-card">
+          <div class="mb-doctor-avatar">👨‍⚕️</div>
+          <h3 class="mb-doctor-name">Dr. Ahmed Raza</h3>
+          <p class="mb-doctor-spec">General Physician</p>
+          <p class="mb-doctor-reg">PMDC · 12 yrs exp</p>
+          <div class="mb-doctor-rating">
+            <span class="mb-stars">⭐⭐⭐⭐⭐</span>
+            <span class="mb-rating-num">4.9</span>
+          </div>
+          <a href="#" class="btn btn-mb-primary w-100 mt-3">Book Now</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="mb-doctor-card mb-doctor-card--featured">
+          <div class="mb-featured-badge">Top Rated</div>
+          <div class="mb-doctor-avatar">👩‍⚕️</div>
+          <h3 class="mb-doctor-name">Dr. Ayesha Khan</h3>
+          <p class="mb-doctor-spec">Mental Health</p>
+          <p class="mb-doctor-reg">PMC · 8 yrs exp</p>
+          <div class="mb-doctor-rating">
+            <span class="mb-stars">⭐⭐⭐⭐⭐</span>
+            <span class="mb-rating-num">5.0</span>
+          </div>
+          <a href="#" class="btn btn-mb-primary w-100 mt-3">Book Now</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="mb-doctor-card">
+          <div class="mb-doctor-avatar">👨‍⚕️</div>
+          <h3 class="mb-doctor-name">Dr. James Wilson</h3>
+          <p class="mb-doctor-spec">Dermatology</p>
+          <p class="mb-doctor-reg">GMC · 15 yrs exp</p>
+          <div class="mb-doctor-rating">
+            <span class="mb-stars">⭐⭐⭐⭐⭐</span>
+            <span class="mb-rating-num">4.8</span>
+          </div>
+          <a href="#" class="btn btn-mb-primary w-100 mt-3">Book Now</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="mb-doctor-card">
+          <div class="mb-doctor-avatar">👩‍⚕️</div>
+          <h3 class="mb-doctor-name">Dr. Sara Al-Farsi</h3>
+          <p class="mb-doctor-spec">Paediatrics</p>
+          <p class="mb-doctor-reg">DHA · 10 yrs exp</p>
+          <div class="mb-doctor-rating">
+            <span class="mb-stars">⭐⭐⭐⭐⭐</span>
+            <span class="mb-rating-num">4.9</span>
+          </div>
+          <a href="#" class="btn btn-mb-primary w-100 mt-3">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-mb-outline btn-lg px-5">View All Doctors</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 6. TESTIMONIALS ========== -->
+<section class="mb-testimonials">
+  <div class="container">
+    <div class="text-center mb-section-header">
+      <p class="mb-eyebrow">PATIENT STORIES</p>
+      <h2 class="mb-section-heading">What our patients say</h2>
+      <p class="mb-section-sub mx-auto">Trusted by thousands of patients across Pakistan, UK and UAE.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="mb-testimonial-card">
+          <div class="mb-testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="mb-testimonial-quote">
+            "Got a prescription within 30 minutes from home. The doctor was professional and thorough. Highly recommend Medibridge!"
+          </p>
+          <div class="mb-testimonial-author">
+            <div class="mb-author-avatar">S</div>
+            <div>
+              <p class="mb-author-name">Sara M.</p>
+              <p class="mb-author-location">Lahore, Pakistan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="mb-testimonial-card mb-testimonial-card--featured">
+          <div class="mb-testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="mb-testimonial-quote">
+            "As someone with a busy schedule in London, this service is a lifesaver. Booked, consulted and got my prescription all in one hour."
+          </p>
+          <div class="mb-testimonial-author">
+            <div class="mb-author-avatar">J</div>
+            <div>
+              <p class="mb-author-name">James K.</p>
+              <p class="mb-author-location">London, UK</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="mb-testimonial-card">
+          <div class="mb-testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <p class="mb-testimonial-quote">
+            "The mental health support I received was exceptional. My therapist was kind, understanding and very helpful."
+          </p>
+          <div class="mb-testimonial-author">
+            <div class="mb-author-avatar">F</div>
+            <div>
+              <p class="mb-author-name">Fatima A.</p>
+              <p class="mb-author-location">Dubai, UAE</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 7. STATISTICS BANNER ========== -->
+<section class="mb-stats">
+  <div class="container">
+    <div class="row g-0 text-center">
+
+      <div class="col-6 col-md-3 mb-stat-item">
+        <p class="mb-stat-number">10,000+</p>
+        <p class="mb-stat-label">Consultations</p>
+      </div>
+      <div class="col-6 col-md-3 mb-stat-item">
+        <p class="mb-stat-number">200+</p>
+        <p class="mb-stat-label">Doctors</p>
+      </div>
+      <div class="col-6 col-md-3 mb-stat-item">
+        <p class="mb-stat-number">15</p>
+        <p class="mb-stat-label">Countries Served</p>
+      </div>
+      <div class="col-6 col-md-3 mb-stat-item">
+        <p class="mb-stat-number">4.9/5</p>
+        <p class="mb-stat-label">Average Rating</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 8. APP DOWNLOAD ========== -->
+<section class="mb-app">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <p class="mb-eyebrow">MOBILE APP</p>
+        <h2 class="mb-section-heading">Your health in your pocket</h2>
+        <p class="mb-section-sub">
+          Download the Medibridge app and access doctors, prescriptions
+          and your health records anytime, anywhere.
+        </p>
+        <div class="mb-app-buttons">
+          <a href="#" class="mb-app-btn">
+            <span class="mb-app-btn-icon">🍎</span>
+            <div>
+              <span class="mb-app-btn-small">Download on the</span>
+              <span class="mb-app-btn-big">App Store</span>
+            </div>
+          </a>
+          <a href="#" class="mb-app-btn">
+            <span class="mb-app-btn-icon">▶</span>
+            <div>
+              <span class="mb-app-btn-small">Get it on</span>
+              <span class="mb-app-btn-big">Google Play</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <div class="mb-phone-mockup">
+          <div class="mb-phone-screen">
+            <div class="mb-phone-content">
+              <p class="mb-phone-header">Medibridge</p>
+              <div class="mb-phone-card">
+                <span>📅 Next Appointment</span>
+                <p>Dr. Ayesha · Today 5PM</p>
+              </div>
+              <div class="mb-phone-card">
+                <span>💊 Prescription Ready</span>
+                <p>Tap to download PDF</p>
+              </div>
+              <div class="mb-phone-card">
+                <span>💬 Message from Doctor</span>
+                <p>Take rest and fluids...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== 9. BLOG PREVIEW ========== -->
+<section class="mb-blog">
+  <div class="container">
+    <div class="text-center mb-section-header">
+      <p class="mb-eyebrow">HEALTH ARTICLES</p>
+      <h2 class="mb-section-heading">Latest from our blog</h2>
+      <p class="mb-section-sub mx-auto">Expert health tips and medical insights from our doctors.</p>
+    </div>
+
+    <div class="row g-4">
+
+      <div class="col-lg-4 col-md-6">
+        <div class="mb-blog-card">
+          <div class="mb-blog-image">🏥</div>
+          <div class="mb-blog-body">
+            <span class="mb-blog-tag">General Health</span>
+            <h3 class="mb-blog-title">10 Signs You Should See a Doctor Today</h3>
+            <p class="mb-blog-excerpt">Learn when your symptoms need immediate medical attention and when home care is enough.</p>
+            <div class="mb-blog-footer">
+              <span class="mb-blog-date">June 20, 2026</span>
+              <a href="#" class="mb-blog-link">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="mb-blog-card">
+          <div class="mb-blog-image">🧠</div>
+          <div class="mb-blog-body">
+            <span class="mb-blog-tag">Mental Health</span>
+            <h3 class="mb-blog-title">Understanding Anxiety: A Complete Guide</h3>
+            <p class="mb-blog-excerpt">Everything you need to know about anxiety disorders, symptoms and treatment options.</p>
+            <div class="mb-blog-footer">
+              <span class="mb-blog-date">June 15, 2026</span>
+              <a href="#" class="mb-blog-link">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="mb-blog-card">
+          <div class="mb-blog-image">💊</div>
+          <div class="mb-blog-body">
+            <span class="mb-blog-tag">Prescriptions</span>
+            <h3 class="mb-blog-title">How Online Prescriptions Work in Pakistan</h3>
+            <p class="mb-blog-excerpt">A step by step guide to getting your prescription online legally and safely.</p>
+            <div class="mb-blog-footer">
+              <span class="mb-blog-date">June 10, 2026</span>
+              <a href="#" class="mb-blog-link">Read More →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="#" class="btn btn-mb-outline btn-lg px-5">View All Articles</a>
     </div>
   </div>
 </section>
