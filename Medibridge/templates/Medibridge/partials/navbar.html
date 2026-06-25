@@ -2,8 +2,16 @@
 <!-- ========== GLOBAL NAVBAR ========== -->
 <nav class="mb-navbar navbar navbar-expand-lg navbar-dark sticky-top">
   <div class="container">
-    <!-- Brand -->
-    <a class="navbar-brand" href="{% url 'home' %}"> Medibridge </a>
+    <!-- Brand + tagline -->
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <span class="brand-icon">✚</span>
+      <div>
+        <span>Medibridge</span>
+        <span class="navbar-brand-tagline"
+          >Bridging Health, Connecting Lives</span
+        >
+      </div>
+    </a>
 
     <!-- Mobile Toggle -->
     <button
@@ -11,8 +19,6 @@
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navMenu"
-      aria-controls="navMenu"
-      aria-expanded="false"
     >
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,24 +26,19 @@
     <!-- Nav Links -->
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav mx-auto gap-lg-1">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Doctors</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Find Doctors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
       </ul>
 
       <!-- Auth Buttons -->
       <div class="d-flex gap-2 mt-3 mt-lg-0 align-items-center">
         <a href="#" class="btn-login">Login</a>
-        <a href="#" class="btn-book">Book Now</a>
+        <a href="#" class="btn-book">Sign Up</a>
       </div>
     </div>
   </div>

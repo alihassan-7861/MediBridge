@@ -1,7 +1,7 @@
 
 /* ── NAVBAR ── */
 .mb-navbar {
-  background: rgba(22,52,74,0.95) !important;
+  background: rgba(22,52,74,0.98) !important;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255,255,255,0.07);
