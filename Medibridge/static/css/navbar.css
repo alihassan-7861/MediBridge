@@ -1,5 +1,94 @@
 
+/* ── NAVBAR ── */
+.mb-navbar {
+  background: rgba(22,52,74,0.95) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 14px 0;
+  z-index: 1000;
+  transition: background 0.3s;
+}
 
+.mb-navbar .navbar-brand {
+  font-size: 1.3rem; font-weight: 800;
+  color: #ffffff !important; letter-spacing: -0.4px;
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+}
+
+.brand-icon {
+  width: 34px; height: 34px;
+  background: linear-gradient(135deg, #2F7A6F, #4adeab);
+  border-radius: 9px;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1rem; color: #ffffff; font-weight: 900; flex-shrink: 0;
+}
+
+.mb-navbar .nav-link {
+  color: rgba(255,255,255,0.65) !important;
+  font-size: 0.88rem; font-weight: 500;
+  padding: 7px 16px !important;
+  border-radius: var(--mb-radius-xs);
+  transition: color 0.2s, background 0.2s;
+}
+
+.mb-navbar .nav-link:hover {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.09);
+}
+
+.mb-navbar .nav-link.active {
+  color: #ffffff !important;
+  background: rgba(47,122,111,0.25);
+}
+
+.mb-navbar .btn-login {
+  background: transparent;
+  color: rgba(255,255,255,0.82);
+  border: 1.5px solid rgba(255,255,255,0.22);
+  border-radius: var(--mb-radius-sm);
+  font-size: 0.85rem; font-weight: 600;
+  padding: 7px 20px;
+  transition: all 0.2s; text-decoration: none; display: inline-block;
+}
+
+.mb-navbar .btn-login:hover {
+  background: rgba(255,255,255,0.09);
+  border-color: rgba(255,255,255,0.45);
+  color: #ffffff;
+}
+
+.mb-navbar .btn-book {
+  background: linear-gradient(135deg, #2F7A6F, #26665c);
+  color: #ffffff; border: none;
+  border-radius: var(--mb-radius-sm);
+  font-size: 0.85rem; font-weight: 600;
+  padding: 7px 20px;
+  transition: all 0.2s; text-decoration: none; display: inline-block;
+  box-shadow: 0 4px 12px rgba(47,122,111,0.35);
+}
+
+.mb-navbar .btn-book:hover {
+  background: linear-gradient(135deg, #26665c, #1f5247);
+  color: #ffffff; transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(47,122,111,0.45);
+}
+
+@media (max-width: 991px) {
+  .mb-navbar .navbar-collapse {
+    background: rgba(22,52,74,0.97);
+    backdrop-filter: blur(20px);
+    padding: 16px; margin-top: 10px;
+    border-radius: var(--mb-radius-sm);
+    border: 1px solid rgba(255,255,255,0.07);
+  }
+  .mb-navbar .d-flex {
+    margin-top: 12px; padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.07);
+  }
+  .mb-navbar .btn-login,
+  .mb-navbar .btn-book { width: 100%; text-align: center; }
+}
 /* Scrolled state — make slightly more opaque */
 .mb-navbar.scrolled {
   background: rgba(22,52,74,0.98) !important;

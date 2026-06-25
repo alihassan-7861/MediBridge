@@ -4,7 +4,7 @@
    ============================================ */
 
 .mb-footer {
-  background: #2d9283;
+  background: rgba(22,52,74,0.98);
   border-top: 1px solid rgba(255,255,255,0.07);
   padding: 72px 0 0;
 }
@@ -86,20 +86,20 @@
 }
 
 .mb-footer-links a:hover { color: #ffffff; gap: 10px; }
-.mb-footer-links a:hover i { color: #4adeab; }
+.mb-footer-links a:hover i { color: #ffffff; }
 
 /* ── EMERGENCY ── */
 .mb-footer-emergency {
   display: flex; align-items: flex-start; gap: 13px;
-  background: rgba(255,80,80,0.10);
-  border: 1px solid rgba(255,80,80,0.25);
+  /* background: rgba(255,80,80,0.10); */
+  /* border: 1px solid rgba(255,80,80,0.25); */
   border-radius: 12px; padding: 16px 20px;
   margin: 36px 0; font-size: 0.82rem;
   color: rgba(255,255,255,0.85); line-height: 1.68;
 }
 
 .mb-emergency-icon {
-  font-size: 1.1rem; color: #ff8080;
+  font-size: 1.1rem; 
   flex-shrink: 0; margin-top: 2px;
 }
 
@@ -110,7 +110,6 @@
   display: flex; align-items: center;
   justify-content: center; flex-wrap: wrap;
   gap: 12px; padding: 22px 0;
-  border-top: 1px solid rgba(255,255,255,0.10);
 }
 
 .mb-footer-bottom-left {
