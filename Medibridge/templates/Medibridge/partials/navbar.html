@@ -4,12 +4,19 @@
   <div class="container">
     <!-- Brand + tagline -->
     <a class="navbar-brand" href="{% url 'home' %}">
-      <span class="brand-icon">✚</span>
+      <img
+        src="{% static 'images/logo.png' %}"
+        alt="Medibridge Logo"
+        class="brand-logo"
+      />
       <div>
-        <span>Medibridge</span>
-        <span class="navbar-brand-tagline"
-          >Bridging Health, Connecting Lives</span
+        <p style="color: #2f7a6f">
+          Medi<span style="color: #16344a">Bridge</span>
+          <span class="navbar-brand-tagline" style="color:#5C6B72;">
+          Bridging Health, Connecting Lives</span
         >
+        </p>
+        
       </div>
     </a>
 

@@ -290,14 +290,26 @@
 .mb-step-item:hover::before { opacity: 1; }
 
 .mb-step-icon {
-  width: 64px; height: 64px; border-radius: 50%;
-  background: #f0f7f6; border: 1px solid #e0e8e7;
-  display: flex; align-items: center; justify-content: center;
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  background: #f0f7f6;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto 16px;
-  transition: background 0.25s;
+  overflow: hidden;
+  padding: 12px;
+}
+
+.mb-step-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .mb-step-item:hover .mb-step-icon { background: #edf5f4; }
-.mb-step-icon img { width: 32px; height: 32px; }
+/* .mb-step-icon img { width: 32px; height: 32px; } */
 
 .mb-step-num {
   width: 28px; height: 28px; border-radius: 50%;
