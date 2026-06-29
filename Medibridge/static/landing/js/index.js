@@ -273,4 +273,191 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+(function () {
+  const overlay = document.getElementById('bookingOverlay');
+  const closeBtn = document.getElementById('bookingClose');
+  const doctorLabel = document.getElementById('bookingDoctorLabel');
+  const calGrid = document.getElementById('calGrid');
+  const calMonth = document.getElementById('calMonth');
+  const prevMonthBtn = document.getElementById('prevMonth');
+  const nextMonthBtn = document.getElementById('nextMonth');
+  const slotsSection = document.getElementById('slotsSection');
+  const slotsTitle = document.getElementById('slotsTitle');
+  const slotsGrid = document.getElementById('slotsGrid');
+  const confirmSection = document.getElementById('confirmSection');
+  const bookingSummary = document.getElementById('bookingSummary');
+  const confirmBtn = document.getElementById('confirmBookingBtn');
+
+  let currentYear = new Date().getFullYear();
+  let currentMonth = new Date().getMonth();
+  let selectedDate = null;
+  let selectedSlot = null;
+  let currentDoctor = '';
+  let currentWA      = ''; // default fallback WhatsApp number
+
+
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const dayNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+  function buildCalendar() {
+    calMonth.textContent = `${months[currentMonth]} ${currentYear}`;
+    calGrid.innerHTML = '';
+
+    dayNames.forEach(d => {
+      const el = document.createElement('div');
+      el.className = 'cal-day-name';
+      el.textContent = d;
+      calGrid.appendChild(el);
+    });
+
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+    const totalDays = new Date(currentYear, currentMonth + 1, 0).getDate();
+    const today = new Date();
+
+    for (let i = 0; i < firstDay; i++) {
+      const el = document.createElement('div');
+      el.className = 'cal-day empty';
+      calGrid.appendChild(el);
+    }
+
+    for (let d = 1; d <= totalDays; d++) {
+      const el = document.createElement('div');
+      const dt = new Date(currentYear, currentMonth, d);
+      const isToday = dt.toDateString() === today.toDateString();
+      const isPast = dt < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+
+      el.className = 'cal-day' + (isToday ? ' today' : '') + (isPast ? ' past' : '');
+      el.textContent = d;
+
+      if (!isPast) el.addEventListener('click', () => selectDate(d, el));
+      calGrid.appendChild(el);
+    }
+  }
+
+  function selectDate(day, el) {
+    document.querySelectorAll('.cal-day.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.add('selected');
+
+    const month = String(currentMonth + 1).padStart(2, '0');
+    const dayStr = String(day).padStart(2, '0');
+    selectedDate = `${currentYear}-${month}-${dayStr}`;
+    selectedSlot = null;
+
+    confirmSection.style.display = 'none';
+    slotsSection.style.display = 'block';
+    slotsTitle.textContent = `Available slots for ${day} ${months[currentMonth]} ${currentYear}`;
+
+    buildSlots();
+  }
+
+  function buildSlots() {
+    slotsGrid.innerHTML = '';
+    let hour = 9, minute = 0;
+
+    while (hour < 21) {
+      const period = hour < 12 ? 'AM' : 'PM';
+      const displayHour = hour > 12 ? hour - 12 : hour;
+      const label = `${displayHour}:${minute === 0 ? '00' : minute} ${period}`;
+
+      const btn = document.createElement('button');
+      btn.className = 'slot-btn';
+      btn.textContent = label;
+      btn.addEventListener('click', () => selectSlot(label, btn));
+      slotsGrid.appendChild(btn);
+
+      minute += 30;
+      if (minute === 60) { minute = 0; hour += 1; }
+    }
+  }
+
+  function selectSlot(label, el) {
+    document.querySelectorAll('.slot-btn.selected').forEach(e => e.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedSlot = label;
+
+    confirmSection.style.display = 'block';
+    bookingSummary.innerHTML = `Date: <span>${selectedDate}</span> &middot; Time: <span>${selectedSlot}</span>` +
+      (currentDoctor ? ` &middot; With: <span>${currentDoctor}</span>` : '');
+    confirmSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  function openModal(doctorName, whatsappNumber) {
+    currentDoctor = doctorName || '';
+    currentWA     = whatsappNumber || '';
+
+    doctorLabel.textContent = currentDoctor ? `Book with ${currentDoctor}` : 'Choose your preferred slot';
+
+    selectedDate = null;
+    selectedSlot = null;
+    slotsSection.style.display = 'none';
+    confirmSection.style.display = 'none';
+    document.getElementById('patientName').value = '';
+    document.getElementById('patientPhone').value = '';
+    document.getElementById('patientConcern').value = '';
+
+    currentYear = new Date().getFullYear();
+    currentMonth = new Date().getMonth();
+    buildCalendar();
+
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.js-book-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal(btn.dataset.doctor || '', btn.dataset.whatsapp || '');
+    });
+  });
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeModal(); });
+
+  prevMonthBtn.addEventListener('click', () => {
+    currentMonth--;
+    if (currentMonth < 0) { currentMonth = 11; currentYear--; }
+    buildCalendar();
+  });
+  nextMonthBtn.addEventListener('click', () => {
+    currentMonth++;
+    if (currentMonth > 11) { currentMonth = 0; currentYear++; }
+    buildCalendar();
+  });
+
+  confirmBtn.addEventListener('click', () => {
+    const name = document.getElementById('patientName').value.trim();
+    const phone = document.getElementById('patientPhone').value.trim();
+    const concern = document.getElementById('patientConcern').value.trim();
+
+    if (!name || !phone || !concern) {
+      alert('Please fill in all fields before confirming.');
+      return;
+    }
+
+    const message = encodeURIComponent(
+      `Hello Medibridge!\n\n` +
+      `I would like to book an appointment.\n\n` +
+      `Booking details:\n` +
+      `- Name: ${name}\n` +
+      `- Phone: ${phone}\n` +
+      (currentDoctor ? `- Doctor: ${currentDoctor}\n` : '') +
+      `- Date: ${selectedDate}\n` +
+      `- Time: ${selectedSlot}\n` +
+      `- Concern: ${concern}\n\n` +
+      `Please confirm my appointment. Thank you!`
+    );
+
+    window.open(`https://wa.me/${currentWA}?text=${message}`, '_blank');
+    closeModal();
+  });
+})();
+
+
+
+  
 });

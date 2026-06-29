@@ -463,8 +463,8 @@
             </div>
           </div>
            <div class="mb-doctor-book-overlay">
-            <a href="#" class="mb-doctor-book-btn">Book Now</a>
-          </div>
+<a href="#" class="mb-doctor-book-btn js-book-btn" data-doctor="Dr. Bilal"  data-whatsapp="923195244726">
+Book Now</a>          </div>
         </div>
       </div>
       <div class="col-lg-3 col-md-6">
@@ -505,8 +505,8 @@
               <span class="mb-rating-num">5.0</span>
             </div>
              <div class="mb-doctor-book-overlay">
-            <a href="#" class="mb-doctor-book-btn">Book Now</a>
-          </div>
+<a href="#" class="mb-doctor-book-btn js-book-btn" data-doctor="Dr. Kamran" data-whatsapp="923110760679">
+Book Now</a>          </div>
           </div>
         </div>
       </div>
@@ -548,8 +548,8 @@
               <span class="mb-rating-num">4.8</span>
             </div>
              <div class="mb-doctor-book-overlay">
-            <a href="#" class="mb-doctor-book-btn">Book Now</a>
-          </div>
+<a href="#" class="mb-doctor-book-btn js-book-btn" data-doctor="Dr. Umair" data-whatsapp="923105856582">Book Now</a>  
+ </div>
           </div>
         </div>
       </div>
@@ -894,7 +894,44 @@
     </div>
   </div>
 </section>
+<!-- ========== BOOKING MODAL ========== -->
+<div class="mb-booking-overlay" id="bookingOverlay">
+  <div class="mb-booking-modal">
+    <button class="mb-booking-close" id="bookingClose" aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
 
+    <div class="mb-booking-header">
+      <p class="mb-eyebrow">BOOK APPOINTMENT</p>
+      <h3 class="mb-booking-title" id="bookingDoctorLabel">Choose your preferred slot</h3>
+    </div>
+
+    <div class="cal-header">
+      <button class="cal-nav" id="prevMonth" aria-label="Previous month">&#8249;</button>
+      <span class="cal-month" id="calMonth"></span>
+      <button class="cal-nav" id="nextMonth" aria-label="Next month">&#8250;</button>
+    </div>
+    <div class="cal-grid" id="calGrid"></div>
+
+    <div class="slots-section" id="slotsSection" style="display:none;">
+      <p class="slots-title" id="slotsTitle">Available slots</p>
+      <div class="slots-grid" id="slotsGrid"></div>
+    </div>
+
+    <div class="confirm-section" id="confirmSection" style="display:none;">
+      <div class="booking-summary" id="bookingSummary"></div>
+      <label class="form-label">Your full name</label>
+      <input type="text" class="form-input" id="patientName" placeholder="e.g. Sara Ahmed">
+      <label class="form-label">Your phone number</label>
+      <input type="text" class="form-input" id="patientPhone" placeholder="e.g. 0300 1234567">
+      <label class="form-label">Your main concern</label>
+      <input type="text" class="form-input" id="patientConcern" placeholder="e.g. Fever and cough for 3 days">
+      <button class="btn-whatsapp" id="confirmBookingBtn">
+        <i class="fa-brands fa-whatsapp"></i> Confirm via WhatsApp
+      </button>
+    </div>
+  </div>
+</div>
 {% endblock %} {% block extra_js %}
 <script src="{% static 'landing/js/index.js' %}"></script>
 {% endblock %}
