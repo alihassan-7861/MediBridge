@@ -417,6 +417,43 @@
 .mb-stars-row img { width: 16px; height: 16px; }
 .mb-rating-num { font-size: 0.88rem; font-weight: 700; color: #16344A; }
 
+
+.mb-doctor-avatar {
+  position: relative;
+}
+
+.mb-doctor-book-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 52, 74, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.28s ease;
+}
+.mb-doctor-card:hover .mb-doctor-book-overlay {
+  opacity: 1;
+}
+
+.mb-doctor-book-btn {
+  background: #ffffff;
+  color: #16344A;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  transform: translateY(10px);
+  transition: transform 0.28s ease, background 0.2s, color 0.2s;
+}
+.mb-doctor-card:hover .mb-doctor-book-btn {
+  transform: translateY(0);
+}
+.mb-doctor-book-btn:hover {
+  background: #2F7A6F;
+  color: #ffffff;
+}
 /* ══════════════════════════════════════════
    TESTIMONIALS — Image 5 style
    White cards, real avatars, grey stars
