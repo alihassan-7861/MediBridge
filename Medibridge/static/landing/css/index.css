@@ -398,11 +398,11 @@
 
 .mb-doctor-avatar {
   width: 100%; height: 220px; overflow: hidden;
-  background: #f0f7f6;
+  background: #ffffff;
 }
 .mb-doctor-avatar img {
   width: 100%; height: 100%;
-  object-fit: cover; object-position: center top; display: block;
+  object-fit: contain; object-position: center top; display: block;
   transition: transform 0.35s ease;
 }
 .mb-doctor-card:hover .mb-doctor-avatar img { transform: scale(1.04); }
