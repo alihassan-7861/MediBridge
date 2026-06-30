@@ -15,7 +15,18 @@
   color: #ffffff !important; letter-spacing: -0.4px;
   display: flex; align-items: center; gap: 10px; text-decoration: none;
 }
+.mb-navbar .navbar-toggler {
+  border: none;
+  padding: 4px 8px;
+}
 
+.mb-navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.mb-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%232F7A6F' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 .brand-logo {
   width: 50px;
   height: 50px;

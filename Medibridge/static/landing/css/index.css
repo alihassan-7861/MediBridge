@@ -764,6 +764,14 @@
   .mb-steps-wrapper { flex-wrap: wrap; gap: 16px; }
   .mb-step-connector { display: none; }
   .mb-step-item { min-width: 140px; }
+  /* Add this block */
+  .mb-navbar .navbar-collapse .nav-link {
+    color: #ffffff !important;
+  }
+  .mb-navbar .navbar-collapse .nav-link.active {
+    color: #ffffff !important;
+    font-weight: 700;
+  }
 }
 
 @media (max-width: 768px) {
