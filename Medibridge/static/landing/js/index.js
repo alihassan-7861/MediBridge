@@ -391,8 +391,9 @@ document.addEventListener('DOMContentLoaded', function () {
     selectedSlot = null;
     slotsSection.style.display = 'none';
     confirmSection.style.display = 'none';
-    document.getElementById('patientName').value = '';
-    document.getElementById('patientPhone').value = '';
+    document.getElementById('patientName').value    = '';
+    document.getElementById('patientPhone').value   = '';
+    document.getElementById('patientEmail').value   = '';  // ← add this line
     document.getElementById('patientConcern').value = '';
 
     currentYear = new Date().getFullYear();
@@ -430,21 +431,23 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   confirmBtn.addEventListener('click', () => {
-    const name = document.getElementById('patientName').value.trim();
-    const phone = document.getElementById('patientPhone').value.trim();
+    const name    = document.getElementById('patientName').value.trim();
+    const phone   = document.getElementById('patientPhone').value.trim();
+    const email   = document.getElementById('patientEmail').value.trim();
     const concern = document.getElementById('patientConcern').value.trim();
 
-    if (!name || !phone || !concern) {
-      alert('Please fill in all fields before confirming.');
-      return;
-    }
+    if (!name || !phone || !email || !concern) {
+  alert('Please fill in all fields before confirming.');
+  return;
+}
 
     const message = encodeURIComponent(
-      `Hello Medibridge!\n\n` +
+      `Hello Medibridge! 👋\n\n` +
       `I would like to book an appointment.\n\n` +
-      `Booking details:\n` +
+      `📋 Booking Details:\n` +
       `- Name: ${name}\n` +
-      `- Phone: ${phone}\n` +
+      `- WhatsApp Number: ${phone}\n` +
+      `- Email: ${email || 'Not provided'}\n` +
       (currentDoctor ? `- Doctor: ${currentDoctor}\n` : '') +
       `- Date: ${selectedDate}\n` +
       `- Time: ${selectedSlot}\n` +
